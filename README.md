@@ -1,43 +1,111 @@
-# Restaurant-Orders-Analysis
-Restaurant Orders Analysis using SQL
+# Restaurant Orders SQL Analysis
 
-A quarter's worth of orders from a fictitious restaurant serving international cuisine, including the date and time of each order, the items ordered, and additional details on the type, name and price of the items.
+## Project Overview
+This project analyzes a quarter’s worth of order data from a fictitious restaurant serving international cuisine. The analysis is performed using SQL to explore menu composition, pricing, order volume, item popularity, and customer spending behavior.
 
-**Recommended Analysis**
+The project demonstrates practical SQL skills such as joins, aggregations, subqueries, filtering, and analytical reasoning using relational datasets.
+
+---
+
+## Dataset Description
+
+The dataset consists of two tables:
+
+### menu_items
+Contains details about each dish offered by the restaurant.
+
+| Column Name     | Description |
+|-----------------|-------------|
+| menu_item_id    | Unique identifier for each menu item |
+| item_name       | Name of the dish |
+| category        | Cuisine category (e.g., Italian, Asian) |
+| price           | Price of the dish |
+
+### order_details
+Contains transaction-level order information.
+
+| Column Name        | Description |
+|--------------------|-------------|
+| order_details_id   | Unique identifier for each order record |
+| order_id           | Order number |
+| order_date         | Date the order was placed |
+| order_time         | Time the order was placed |
+| item_id            | Menu item ordered (foreign key) |
+
+---
+
+## Tools Used
+- SQL (joins, aggregations, subqueries)
+- Relational database querying
+- Data exploration and analysis
+
+---
+
+## Analysis Performed
+
+### Menu Analysis
+- Counted the total number of items on the menu
+- Identified the least and most expensive menu items
+- Analyzed Italian cuisine:
+  - Number of Italian dishes
+  - Least and most expensive Italian items
+
+### Category Analysis
+- Counted the number of dishes in each category
+- Calculated the average price per category
+
+### Order Analysis
+- Determined the date range of the dataset
+- Calculated:
+  - Total number of orders
+  - Total number of items ordered
+- Identified orders with the highest number of items
+- Found orders containing more than 12 items
+
+### Order & Menu Integration
+- Joined menu and order tables for item-level analysis
+- Identified:
+  - Least ordered items
+  - Most ordered items
+  - Categories of popular and unpopular items
+
+### Revenue Analysis
+- Calculated total spend per order
+- Identified the top 5 highest-spending orders
+- Analyzed item-level details for:
+  - The highest-spending order
+  - The top 5 highest-spending orders
+
+---
+
+## Key Insights
+- Menu pricing varies significantly across categories
+- Italian dishes represent a major portion of the menu
+- A small number of orders account for a large share of total revenue
+- High order value is driven more by item price than item quantity
+- Popular items tend to cluster within specific categories
+
+---
+
+## Repository Structure
+restaurant-orders-sql/
+│
+├── README.md
+└── restaurant_orders_analysis.sql
 
 
-View the menu_items table and write a query to find the number of items on the menu
+---
+
+## How to Run
+1. Load the dataset into your SQL environment (MySQL, PostgreSQL, or SQLite)
+2. Ensure the tables are named:
+   - menu_items
+   - order_details
+3. Run the queries in `restaurant_orders_analysis.sql` sequentially
 
 
-What are the least and most expensive items on the menu?
+---
 
-
-How many Italian dishes are on the menu? What are the least and most expensive Italian dishes on the menu?
-
-
-How many dishes are in each category? What is the average dish price within each category?
-
-View the order_details table. What is the date range of the table?
-
-
-How many orders were made within this date range? How many items were ordered within this date range?
-
-
-Which orders had the most number of items?
-
-
-How many orders had more than 12 items?
-
-Combine the menu_items and order_details tables into a single table
-
-
-What were the least and most ordered items? What categories were they in?
-
-
-What were the top 5 orders that spent the most money?
-
-
-View the details of the highest spend order. Which specific items were purchased?
-
-
-View the details of the top 5 highest spend orders
+## Author
+Ridwan Ibrahim
+Data Analytics | SQL | Business Intelligence  | PowerBI | Tableau | Python | R
